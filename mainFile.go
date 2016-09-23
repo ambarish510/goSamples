@@ -2,9 +2,16 @@ package main
 import (
   "fmt"
 )
+var(
+  Version string
+  Build string
+)
 
 
 func main() {
+  cliSample()
+  fmt.Println("Exiting")
+    fmt.Println("Version, Build : ",Version,Build)
   //fmt.Println(os.Args)
   //cmdLineSample()
   //cmdLineFlags()
@@ -17,8 +24,6 @@ func main() {
   //URLFormatCheck()
   //StringReplace();
   //getWorkingDir()
-  cliSample()
-  fmt.Println("Exiting")
   // fileExists,errFileExists := isFileExists("/Users/ambarish.a/Documents/myRepos/GoLangSamples/src/github.com/ambsflip/goSamples")
   // if errFileExists != nil {
   //     fmt.Println("errFileExists: ",errFileExists)
