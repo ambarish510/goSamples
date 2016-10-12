@@ -10,7 +10,7 @@
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
-            <url>git@github.com:Flipkart/GenesisSampleApp.git</url>
+            <url>ENTER THE GIT REPO URL HERE</url>
           </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
         <branches>

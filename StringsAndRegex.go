@@ -8,7 +8,7 @@ import "strconv"
 
 func regexsample() {
 
-  body := "<flow-definition plugin=\"workflow-job@2.2\"><actions/><description/><keepDependencies>false</keepDependencies><properties><com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty plugin=\"ownership@0.8\"/></properties><definition class=\"org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition\" plugin=\"workflow-cps@2.4\"><scm class=\"hudson.plugins.git.GitSCM\" plugin=\"git@2.4.1\"><configVersion>2</configVersion><userRemoteConfigs><hudson.plugins.git.UserRemoteConfig><url>git@github.com:Flipkart/GenesisSampleApp.git</url></hudson.plugins.git.UserRemoteConfig></userRemoteConfigs><branches><hudson.plugins.git.BranchSpec><name>*/master</name></hudson.plugins.git.BranchSpec></branches><doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations><submoduleCfg class=\"list\"/><extensions/></scm><scriptPath>Jenkinsfile</scriptPath></definition><triggers/></flow-definition>"
+  body := "<flow-definition plugin=\"workflow-job@2.2\"><actions/><description/><keepDependencies>false</keepDependencies><properties><com.synopsys.arc.jenkins.plugins.ownership.jobs.JobOwnerJobProperty plugin=\"ownership@0.8\"/></properties><definition class=\"org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition\" plugin=\"workflow-cps@2.4\"><scm class=\"hudson.plugins.git.GitSCM\" plugin=\"git@2.4.1\"><configVersion>2</configVersion><userRemoteConfigs><hudson.plugins.git.UserRemoteConfig><url>git@github.com:repoURL.git</url></hudson.plugins.git.UserRemoteConfig></userRemoteConfigs><branches><hudson.plugins.git.BranchSpec><name>*/master</name></hudson.plugins.git.BranchSpec></branches><doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations><submoduleCfg class=\"list\"/><extensions/></scm><scriptPath>Jenkinsfile</scriptPath></definition><triggers/></flow-definition>"
 
   r, _ := regexp.Compile("<hudson.plugins.git.UserRemoteConfig><url>.+</url>")
   fmt.Println(r.ReplaceAllString(body, "<hudson.plugins.git.UserRemoteConfig><url>GIT URL</url>"))
@@ -29,7 +29,7 @@ func URLFormatCheck(){
   fmt.Println("Host", u.Host)
 }
 func StringReplace(){
-  responseStatus := "401 Invalid password/token for user: ambarish.a"
+  responseStatus := "401 Invalid password/token for user: abc.d"
   respStatusCode:= 401
 
   reponseStatusMsg := strings.Replace(responseStatus, strconv.Itoa(respStatusCode), "", -1)
